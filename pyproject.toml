@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "p4adev_recipes"
-version = "0.0.1"
+version = "0.0.2"
 description = "Some advanced recipes bases for python-for-android."
 authors = ["BlackCatDevel0per <bcdev@mail.ru>"]
 
@@ -100,12 +100,17 @@ indent-style = "tab"
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
 
-#python-for-android = {url = "https://github.com/BlackCatDevel0per/python-for-android/archive/refs/heads/master.zip"}
 installer = "^0.7.0"
+
+[tool.poetry.group.recommends]
+optional = true
+
+[tool.poetry.group.recommends.dependencies]
+python-for-android = {url = "https://github.com/BlackCatDevel0per/python-for-android/archive/refs/heads/master.zip"}
+sh = ">=1.10,<2.0"
 
 # [tool.poetry.group.dev]
 # optional = true
-sh = "^2.0.6"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
@@ -114,17 +119,9 @@ ruff = "^0.0.292"
 ipykernel = "^6.29.4"
 ipython = "8.12.3"
 
-[tool.poetry.group.performance]
-optional = true
-
-[tool.poetry.group.performance.dependencies]
-ujson = "^5.9.0"
-
-
-
-
 [tool.poetry.group.other.dependencies]
 rich = "^13.7.0"
+
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
