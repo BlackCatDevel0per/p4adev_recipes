@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "p4adev_recipes"
 version = "0.0.2"
-description = "Some advanced recipes bases for python-for-android."
+description = "Some advanced recipes bases for python-for-android projects."
 authors = ["BlackCatDevel0per <bcdev@mail.ru>"]
 
 [tool.ruff]
