@@ -1,8 +1,18 @@
 [tool.poetry]
 name = "p4adev_recipes"
-version = "0.0.2"
+version = "0.0.3"
 description = "Some advanced recipes bases for python-for-android projects."
 authors = ["BlackCatDevel0per <bcdev@mail.ru>"]
+license = "Apache 2.0"
+
+packages = [
+    { include = "p4adev_recipes", from = "src" }
+]
+
+[tool.poetry.urls]
+Homepage = "https://github.com/BlackCatDevel0per/p4adev_recipes"
+Depository = "https://github.com/BlackCatDevel0per/p4adev_recipes"
+Repository = "https://github.com/BlackCatDevel0per/p4adev_recipes"
 
 [tool.ruff]
 line-length = 100
@@ -109,8 +119,8 @@ optional = true
 python-for-android = {url = "https://github.com/BlackCatDevel0per/python-for-android/archive/refs/heads/master.zip"}
 sh = ">=1.10,<2.0"
 
-# [tool.poetry.group.dev]
-# optional = true
+[tool.poetry.group.dev]
+optional = true
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.2"
